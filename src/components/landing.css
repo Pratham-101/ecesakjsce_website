@@ -114,11 +114,11 @@ body {
 
 .header__img {
   position: absolute;
-  top: 15px;
+  top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  /* z-index: ; Ensure the image stays behind the overlay and text */
+  width: 110%;
+  height: 120%;
+  z-index: 0; /* Ensure the image stays behind the overlay and text */
   background: url("../assets/images/grp.JPG") no-repeat center center;
   background-size: cover;
   /* No opacity, image remains in full color */
@@ -444,7 +444,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .navbar {
-    padding: 10px 20px; /* Adjust padding */
+    padding: 20px 20px; /* Adjust padding */
     height: 100px; /* Adjust height */
     font-size: 0.8rem; /* Adjust font size */
     flex-direction: column; /* Stack items vertically */

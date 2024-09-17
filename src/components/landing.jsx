@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ const Landing = () => {
 
   useEffect(() => {
     gsap.to(heroRef.current, {
-      yPercent: 20,
+      yPercent: 0,
       scale: 1.05,
       ease: "power1.inOut",
       scrollTrigger: {
@@ -67,11 +67,12 @@ const Landing = () => {
       }
     );
 
+    // Animation for the hero section
     const letters = document.querySelectorAll('.letter');
     letters.forEach((letter, index) => {
       gsap.fromTo(letter, {
         opacity: 0,
-        y: 10,
+        y: 50,
       }, {
         opacity: 1,
         y: 0,
@@ -98,11 +99,11 @@ const Landing = () => {
 
       <section className="header hero-section" ref={heroRef}>
         <div className="header__img" ref={imageRef}></div>
-        <h1 className="title welcome-message">
-          {Array.from("").map((char, index) => (
+        {/* <h1 className="title welcome-message">
+          {Array.from("Welcome to e-CESA").map((char, index) => (
             <span key={index} className="letter">{char}</span>
           ))}
-        </h1>
+        </h1> */}
       </section>
 
       <section className="about about-us-section glass-effect" id="about">
@@ -122,7 +123,6 @@ const Landing = () => {
       <section className="work meet-our-members-section">
         <h2 className="section-title">Meet Our Members</h2>
         
-        {/* Core Team */}
         <div className="team-section">
           <h3 className="team-title">Core Team</h3>
           <div className="members core-team">
@@ -141,7 +141,6 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* Tech Team */}
         <div className="team-section">
           <h3 className="team-title">Tech Team</h3>
           <div className="members tech-team">
@@ -163,7 +162,6 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* Creative Team */}
         <div className="team-section">
           <h3 className="team-title">Creative Team</h3>
           <div className="members creative-team">
@@ -188,7 +186,6 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* PR Team */}
         <div className="team-section">
           <h3 className="team-title">PR Team</h3>
           <div className="members pr-team">
@@ -207,7 +204,6 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* Marketing Team */}
         <div className="team-section">
           <h3 className="team-title">Marketing Team</h3>
           <div className="members marketing-team">
@@ -229,7 +225,6 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* Literary Team */}
         <div className="team-section">
           <h3 className="team-title">Literary Team</h3>
           <div className="members literary-team">
