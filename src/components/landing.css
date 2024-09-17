@@ -42,7 +42,7 @@ body {
   color: var(--pr-color);
   position: sticky;
   top: 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgb(0, 0, 0);
   backdrop-filter: blur(10px);
   z-index: 1000;
   font-size: 2rem; /* Increased the overall font size */
@@ -56,6 +56,12 @@ body {
   display: block;
   margin: 0; /* Center the logo */
   object-fit: contain; /* Prevent stretching */
+}
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    height: 150px; /* Adjusted for mobile devices */
+  }
 }
 
 .nav-links {
@@ -101,26 +107,21 @@ body {
   position: relative;
   font-size: var(--fz-big);
   text-align: center;
-  color: #e9f1e4; /* Bright orange-red color */
+  color: #247dd6; /* Solid Dodger Blue color */
   text-transform: uppercase;
-  z-index: 2;
-}
-
-.letter {
-  display: inline-block;
-  opacity: 0;
-  letter-spacing: 5px;
+  z-index: 2; /* Keep the text above the image */
 }
 
 .header__img {
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0; /* Ensure the image stays behind the overlay and text */
-  background: url("/public/assets/images/grp.JPG") no-repeat center center;
-  background-size: cover; /* Ensure the image scales to cover the container */ /* Ensure the image covers the container without stretching */
+  width: 100vw;
+  height: 100vh;
+  /* z-index: ; Ensure the image stays behind the overlay and text */
+  background: url("../assets/images/grp.JPG") no-repeat center center;
+  background-size: cover;
+  /* No opacity, image remains in full color */
 }
 
 .section-title {
@@ -210,108 +211,109 @@ body {
   text-align: center;
 }
 
+
 .member.pratham {
   background-image: url('/assets/members/pratham.jpg');
 }
 
 .member.soumya {
-  background-image: url('/assets/members/soumya.jpg');
+  background-image: url('../public/assets/members/soumya.jpg');
 }
 
 .member.arpita {
-  background-image: url('/assets/members/arpita.PNG');
+  background-image: url('../public/assets/members/arpita.PNG');
 }
 
 .member.hrishikesh {
-  background-image: url('/assets/members/hrishikesh.jpg');
+  background-image: url('../public/assets/members/hrishikesh.jpg');
 }
 
 .member.tejas {
-  background-image: url('/assets/members/tejas.jpg');
+  background-image: url('../public/assets/members/tejas.jpg');
 }
 
 .member.piyush {
-  background-image: url('/assets/members/tyagi.jpg');
+  background-image: url('../public/assets/members/tyagi.jpg');
 }
 
 .member.miten {
-  background-image: url('/assets/members/miten.png');
+  background-image: url('../public/assets/members/miten.png');
 }
 
 .member.siya {
-  background-image: url('/assets/members/siya.jpg');
+  background-image: url('../public/assets/members/siya.jpg');
 }
 
 .member.aamir {
-  background-image: url('/assets/members/aamir.jpg');
+  background-image: url('../public/assets/members/aamir.jpg');
 }
 
 .member.purva {
-  background-image: url('/assets/members/purva.png');
+  background-image: url('../public/assets/members/purva.png');
 }
 
 .member.priyanshu {
-  background-image: url('/assets/members/priyanshu.jpg');
+  background-image: url('../public/assets/members/priyanshu.jpg');
 }
 
 .member.rishabh {
-  background-image: url('/assets/members/rishabh.jpg');
+  background-image: url('../public/assets/members/rishabh.jpg');
 }
 
 .member.ajeet {
-  background-image: url('/assets/members/ajeet.jpg');
+  background-image: url('../public/assets/members/ajeet.jpg');
 }
 
 .member.arnav {
-  background-image: url('/assets/members/arnav.jpeg');
+  background-image: url('../public/assets/members/arnav.jpeg');
 }
 
 .member.swajeet {
-  background-image: url('/assets/members/swajeet.jpg');
+  background-image: url('../public/assets/members/swajeet.jpg');
 }
 
 .member.aliasgar {
-  background-image: url('/assets/members/ali.png');
+  background-image: url('../public/assets/members/ali.png');
 }
 
 .member.aarohi {
-  background-image: url('/assets/members/aarohi.JPG');
+  background-image: url('../public/assets/members/aarohi.JPG');
 }
 
 .member.jaiee {
-  background-image: url('/assets/members/jaiee.jpg');
+  background-image: url('../public/assets/members/jaiee.jpg');
 }
 
 .member.lomte {
-  background-image: url('/assets/members/piyush.jpg');
+  background-image: url('../public/assets/members/piyush.jpg');
 }
 
 .member.chirayu {
-  background-image: url('/assets/members/chirayu.jpg');
+  background-image: url('../public/assets/members/chirayu.jpg');
 }
 
 .member.takshil {
-  background-image: url('/assets/members/takshil.jpg');
+  background-image: url('../public/assets/members/takshil.jpg');
 }
 
 .member.jhanvi {
-  background-image: url('/assets/members/jhanvi.jpg');
+  background-image: url('../public/assets/members/jhanvi.jpg');
 }
 
 .member.purva_2 {
-  background-image: url('/assets/members/jtpurva.jpeg');
+  background-image: url('../public/assets/members/jtpurva.jpeg');
 }
 
 .member.shrutika {
-  background-image: url('/assets/members/shrutika.jpeg');
+  background-image: url('../public/assets/members/shrutika.jpeg');
 }
 
 .member.arun {
-  background-image: url('/assets/members/arun.jpg');
+  background-image: url('../public/assets/members/arun.jpg');
 }
 
 .member.swapnil {
-  background-image: url('/assets/members/swapnil.png');
+  background-image: url('../public/assets/members/swapnil.png');
 }
 
 /* Media Queries for Responsiveness */
